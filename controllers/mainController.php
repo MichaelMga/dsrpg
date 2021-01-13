@@ -1,6 +1,9 @@
 <?php
 
 
+   
+
+
 
      function showCategory($category){
 
@@ -10,6 +13,11 @@
 
 
         echo 'gathering datas about ' . $category;
+
+        $exercice1 = new Exercice();
+
+        $exercices = [$exercice1];
+        
 
 
         require './views/category.php';

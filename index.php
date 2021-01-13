@@ -4,6 +4,8 @@
 
    require 'views/header.php';
 
+   require 'classes/Exercice.php';
+
    require 'controllers/mainController.php';
 
 
