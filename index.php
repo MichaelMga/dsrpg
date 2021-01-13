@@ -19,22 +19,26 @@
 
       case root : 
 
-         showCategory('graph');
+         //showCategory('graph');
+
+         showProfile();
+
+
 
          break;
 
-    
 
-      
 
    }
 
 
 
+if(isset($_GET['category'])){
+    
 
+     showCategory($_GET['category']);
 
-
-
+}
 
 
 

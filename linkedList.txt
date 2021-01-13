@@ -1,0 +1,7 @@
+
+Linked Lists :
+
+
+   Add the element ... 
+   
+   inside the linked list.

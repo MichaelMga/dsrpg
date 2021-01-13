@@ -1,5 +1,7 @@
 <?php
 
-  define("root", "/michael/dsrpg/") ;
+  define("root", "/dsrpg/") ;
 
-  define("rootUrl", "http://localhost" . root) ;
+  define("rootUrl", $_SERVER['SERVER_NAME'] . root) ;
+
+

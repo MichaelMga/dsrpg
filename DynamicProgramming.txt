@@ -1,0 +1,20 @@
+
+Dynamic programming 
+
+
+
+     Array doubling
+
+
+
+     Array diminution
+
+
+
+     Amortization (include doubling )
+
+
+
+
+
+     Knapsack problem 

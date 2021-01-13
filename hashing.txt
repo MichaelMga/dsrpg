@@ -1,0 +1,40 @@
+
+
+Exercice 1 :
+
+  Polynamial construction 
+
+  Given the constant n = 4 
+
+  Return a hash using this method
+
+
+Exercice 2 :
+
+      Linear probing
+
+
+
+Exerice 3 : 
+
+     Quadratic probing
+
+
+Exercice 4 :
+
+      Relatively prime to each other
+
+      
+
+
+
+
+
+
+  Exercice  :
+
+  What's the worst case complexity of this algorithm? 
+
+
+
+
