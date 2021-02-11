@@ -30,8 +30,13 @@
 
      function showProfile(){
 
-
       require './views/profile.php';
+
      }
 
-     
+    
+     function newCharacter(){
+
+         require './views/newCharacter.php';
+
+     }

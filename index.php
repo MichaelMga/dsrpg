@@ -23,7 +23,9 @@
 
          //showCategory('graph');
 
-         showProfile();
+         //showProfile();
+
+         newCharacter();
 
 
 
