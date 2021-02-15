@@ -6,6 +6,8 @@
 
    require 'classes/Exercice.php';
 
+   require 'controllers/apiController.php';
+
    require 'controllers/mainController.php';
 
 
@@ -15,7 +17,6 @@
    echo $request;
 
 
-
    switch($request){
 
 
@@ -23,26 +24,22 @@
 
          //showCategory('graph');
 
-         //showProfile();
+         //newCharacter();
 
-         newCharacter();
+         showProfile();
 
 
 
          break;
 
 
-
    }
+
 
 
 
 if(isset($_GET['category'])){
     
-
      showCategory($_GET['category']);
 
 }
-
-
-

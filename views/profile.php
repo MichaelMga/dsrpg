@@ -101,6 +101,25 @@
 
 
 
+#characterDiv{
+
+position: absolute;
+top: 40vh; 
+right: 20vw;
+height: 30vh;
+width: 10vw;
+
+background: red;
+
+}
+
+
+
+
+
+
+
+
 </style>
 
 
@@ -123,16 +142,16 @@ Welcome on your profile
           
        
           <div id='StacksAndQueues'>
-              <div>linkedLists</div>
+              <div>stacks and queues</div>
               <div>Taux d'accomplissement : 35%</div>
-              <div><button>voir</button></div>
+              <div><a href='<?php echo rootUrl . '?category=linkedLists'?>'><button>voir</button></a></div>
           </div>
 
         
           <div id='Dynamic programming'>
-              <div>linkedLists</div>
+              <div>dynamic programming</div>
               <div>Taux d'accomplissement : 35%</div>
-              <div><button>voir</button></div>
+              <div><a href='<?php echo rootUrl . '?category=linkedLists'?>'><button>voir</button></a></div>
           </div>
     </div>
 
@@ -140,23 +159,23 @@ Welcome on your profile
 
         
          <div id='Trees'>
-              <div>linkedLists</div>
+              <div>Trees</div>
               <div>Taux d'accomplissement : 35%</div>
-              <div><button>voir</button></div>
+              <div><a href='<?php echo rootUrl . '?category=linkedLists'?>'><button>voir</button></a></div>
           </div>
           
        
           <div id='Paths'>
-              <div>linkedLists</div>
+              <div>Paths</div>
               <div>Taux d'accomplissement : 35%</div>
-              <div><button>voir</button></div>
+              <div><a href='<?php echo rootUrl . '?category=linkedLists'?>'><button>voir</button></a></div>
           </div>
 
         
           <div id='Sorting'>
-              <div>linkedLists</div>
+              <div>Sorting</div>
               <div>Taux d'accomplissement : 35%</div>
-              <div><button>voir</button></div>
+              <div><a href='<?php echo rootUrl . '?category=sorting'?>'><button>voir</button></a></div>
           </div>
      </div>
 
@@ -164,23 +183,23 @@ Welcome on your profile
 
 
          <div id='Strings'>
-              <div>linkedLists</div>
+              <div>Strings</div>
               <div>Taux d'accomplissement : 35%</div>
-              <div><button>voir</button></div>
+              <div><a href='<?php echo rootUrl . '?category=linkedLists'?>'><button>voir</button></a></div>
           </div>
           
        
           <div id='Hashing'>
-              <div>linkedLists</div>
+              <div>Hashing</div>
               <div>Taux d'accomplissement : 35%</div>
-              <div><button>voir</button></div>
+              <div><a href='<?php echo rootUrl . '?category=linkedLists'?>'><button>voir</button></a></div>
           </div>
 
         
           <div id='Miscellaneous'>
-              <div>linkedLists</div>
+              <div>Miscellaneous</div>
               <div>Taux d'accomplissement : 35%</div>
-              <div><button>voir</button></div>
+              <div><a href='<?php echo rootUrl . '?category=linkedLists'?>'><button>voir</button></a></div>
           </div>
 
     </div>
@@ -196,7 +215,66 @@ Welcome on your profile
 
     <div id='levelDiv'>Votre niveau : </div>
 
-    <div id='avatarDiv'></div>
+    <div id='avatarDiv'>
+
+         <canvas id='characterCanvas'></canvas>
+
+    </div>
 
 
 </div>
+
+
+
+
+
+
+
+<script>
+
+
+//this object renders a particular
+
+
+//chracter
+  
+var canvas = document.getElementById('characterCanvas');
+
+var c = canvas.getContext('2d');
+
+
+canvas.width = window.innerWidth/5;
+
+canvas.height = window.innerHeight/5;
+
+
+var images = new Array(10);
+
+for (i=1; i < images.length ; i++){
+
+       images[i] = new Image();
+
+       images[i].src = './img/sprites/' + i.toString() + '.png';
+
+}
+
+setInterval(function(){
+    
+    i++;
+
+    if( i >= 9){
+          
+        i = 1;
+
+    }
+    c.clearRect(0, 0, canvas.width, canvas.height);
+    c.drawImage(images[i], 10 , 10 , 100 , 100 );
+
+
+},200)
+
+
+
+
+
+</script>
