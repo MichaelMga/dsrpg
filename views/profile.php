@@ -9,32 +9,115 @@
 
    }
 
-    #accomplishmentsDiv{
+
+
+   body{
+
+       background-image: url("https://wallpaperaccess.com/full/96462.jpg");
+
+       background-size: cover;
+
+       background-repeat: no-repeat;
+
+       background-opacity: 0.5;
+
+       
+   }
+
+
+    canvas{
+
+        width: 100%;
+
+        height: 100%;
+    }
+
+
+    #opacityLayer{
 
         position: absolute;
 
-        top: 18vh;
-        left: 5vw;
+        top:0px;
 
-        width: 40%;
+        left:0px;
 
-        height: 75%;
+        height: 100%;
 
-        display:flex;    
+        width: 100%;
 
-        flex-direction:row;
+        background:black;
 
-        justify-content: space-around;
+        opacity:0.9;
 
-}
+        z-index: 3;
+    }
+
+
+   #mainDiv{
+
+       position: absolute;
+
+       bottom : 13vh;
+
+       height : 70vh;
+
+       width: 64vw;
+
+       left: 18vw;
+
+       background : red;
+
+       display: flex;
+
+       flex-direction: row;
+
+       justify-content: space-around;
+
+       align-items: center;
+
+
+       z-index: 4;
+
+
+
+   }
+
+
+   #mainDiv div{
+
+       height: 80%;
+
+       width: 30%;
+
+       background: green;
+   }
+
+
+
+   #accomplishmentsDiv{
+
+
+     width: 40%;
+ 
+     height: 75%;
+
+     display:flex;    
+
+     flex-direction:row;
+
+     justify-content: space-around;
+
+    background: yellow;
+
+   }
 
 #accomplishmentsDiv div {    
-    
-    height: 100%;
-    width: 30%;
-    display: flex; 
-    flex-direction: column;  
-    justify-content: space-around;
+
+height: 100%;
+width: 30%;
+display: flex; 
+flex-direction: column;  
+justify-content: space-around;
 
 
 }
@@ -42,11 +125,11 @@
 #accomplishmentsDiv div div{
 
 
-    height: 28%;
+height: 28%;
 
-    width: 100%;
+width: 100%;
 
-    background: red;
+background: red;
 
 }
 
@@ -55,24 +138,17 @@
 
 #characterDiv{
 
-    position: absolute;
+   width: 30vw;
 
-    right: 5vw;
+   height :71vh;
 
-    top: 22vh;
+   display : flex;
 
-    width: 30vw;
+   flex-direction: column;
 
-    height :71vh;
+   justify-content: space-around;
 
-
-    display : flex;
-
-    flex-direction: column;
-
-    justify-content: space-around;
-
-
+   align-items: center;
 
 }
 
@@ -80,36 +156,22 @@
 
 #levelDiv{
 
-    height: 10%;
+height: 10%;
 
-    width: 100%;
-    
-    background: green;
+width: 100%;
+
+background: green;
 
 }
 
 
 #avatarDiv{
- 
-   height: 80%;
 
-   width : 100%;
+height: 80%;
 
-   background: blue;
+width : 100%;
 
-}
-
-
-
-#characterDiv{
-
-position: absolute;
-top: 40vh; 
-right: 20vw;
-height: 30vh;
-width: 10vw;
-
-background: red;
+background: blue;
 
 }
 
@@ -128,102 +190,118 @@ background: red;
 Welcome on your profile
 
 
-<div id='accomplishmentsDiv'>
+<,PH
+
+<div id='opacityLayer'>
+
+       
+
+
+</div>
+
+
+
+
+<div id='mainDiv'>
+
+ 
+  <div id='accomplishmentsDiv'>
 
     <div id='column1' >
 
-          <div id='linkedLists'>
-              
-              <div>linkedLists</div>
-              <div>Taux d'accomplissement : 35%</div>
-              <div><a href='<?php echo rootUrl . '?category=linkedLists'?>'><button>voir</button></a></div>
-
-          </div>
+      <div id='linkedLists'>
           
-       
-          <div id='StacksAndQueues'>
-              <div>stacks and queues</div>
-              <div>Taux d'accomplissement : 35%</div>
-              <div><a href='<?php echo rootUrl . '?category=linkedLists'?>'><button>voir</button></a></div>
-          </div>
+          <div>linkedLists</div>
+          <div><a href='<?php echo rootUrl . '?category=linkedLists'?>'><button>voir</button></a></div>
 
-        
-          <div id='Dynamic programming'>
-              <div>dynamic programming</div>
-              <div>Taux d'accomplissement : 35%</div>
-              <div><a href='<?php echo rootUrl . '?category=linkedLists'?>'><button>voir</button></a></div>
-          </div>
-    </div>
+      </div>
+      
+   
+      <div id='StacksAndQueues'>
+          <div>stacks and queues</div>
+          <div><a href='<?php echo rootUrl . '?category=linkedLists'?>'><button>voir</button></a></div>
+      </div>
 
-     <div id='column2'>
+    
+      <div id='Dynamic programming'>
+          <div>dynamic programming</div>
+          <div><a href='<?php echo rootUrl . '?category=linkedLists'?>'><button>voir</button></a></div>
+      </div>
+   </div>
 
-        
-         <div id='Trees'>
-              <div>Trees</div>
-              <div>Taux d'accomplissement : 35%</div>
-              <div><a href='<?php echo rootUrl . '?category=linkedLists'?>'><button>voir</button></a></div>
-          </div>
-          
-       
-          <div id='Paths'>
-              <div>Paths</div>
-              <div>Taux d'accomplissement : 35%</div>
-              <div><a href='<?php echo rootUrl . '?category=linkedLists'?>'><button>voir</button></a></div>
-          </div>
+   <div id='column2'>
 
-        
-          <div id='Sorting'>
-              <div>Sorting</div>
-              <div>Taux d'accomplissement : 35%</div>
-              <div><a href='<?php echo rootUrl . '?category=sorting'?>'><button>voir</button></a></div>
-          </div>
-     </div>
+    
+     <div id='Trees'>
+          <div>Trees</div>
+          <div><a href='<?php echo rootUrl . '?category=linkedLists'?>'><button>voir</button></a></div>
+      </div>
+      
+   
+      <div id='Paths'>
+          <div>Paths</div>
+          <div><a href='<?php echo rootUrl . '?category=linkedLists'?>'><button>voir</button></a></div>
+      </div>
 
-    <div id='column3'>
+    
+      <div id='Sorting'>
+          <div>Sorting</div>
+          <div><a href='<?php echo rootUrl . '?category=sorting'?>'><button>voir</button></a></div>
+      </div>
+   </div>
 
-
-         <div id='Strings'>
-              <div>Strings</div>
-              <div>Taux d'accomplissement : 35%</div>
-              <div><a href='<?php echo rootUrl . '?category=linkedLists'?>'><button>voir</button></a></div>
-          </div>
-          
-       
-          <div id='Hashing'>
-              <div>Hashing</div>
-              <div>Taux d'accomplissement : 35%</div>
-              <div><a href='<?php echo rootUrl . '?category=linkedLists'?>'><button>voir</button></a></div>
-          </div>
-
-        
-          <div id='Miscellaneous'>
-              <div>Miscellaneous</div>
-              <div>Taux d'accomplissement : 35%</div>
-              <div><a href='<?php echo rootUrl . '?category=linkedLists'?>'><button>voir</button></a></div>
-          </div>
-
-    </div>
+  <div id='column3'>
 
 
-</div>
+     <div id='Strings'>
+          <div>Strings</div>
+          <div><a href='<?php echo rootUrl . '?category=linkedLists'?>'><button>voir</button></a></div>
+      </div>
+      
+   
+      <div id='Hashing'>
+          <div>Hashing</div>
+          <div><a href='<?php echo rootUrl . '?category=linkedLists'?>'><button>voir</button></a></div>
+      </div>
+
+    
+      <div id='Miscellaneous'>
+          <div>Miscellaneous</div>
+          <div><a href='<?php echo rootUrl . '?category=linkedLists'?>'><button>voir</button></a></div>
+      </div>
+
+   </div>
+
+
+  </div>
 
 
 
 
 
-<div id='characterDiv'>
+  <div id='characterDiv'>
 
     <div id='levelDiv'>Votre niveau : </div>
 
+    <div id='levelDiv'> star star star </div>
+
+
     <div id='avatarDiv'>
 
-         <canvas id='characterCanvas'></canvas>
+     <canvas id='characterCanvas'></canvas>
 
-    </div>
+   </div>
 
 
 </div>
 
+
+
+
+
+
+
+</div>
 
 
 
@@ -242,10 +320,6 @@ var canvas = document.getElementById('characterCanvas');
 
 var c = canvas.getContext('2d');
 
-
-canvas.width = window.innerWidth/5;
-
-canvas.height = window.innerHeight/5;
 
 
 var images = new Array(10);
@@ -268,7 +342,7 @@ setInterval(function(){
 
     }
     c.clearRect(0, 0, canvas.width, canvas.height);
-    c.drawImage(images[i], 10 , 10 , 100 , 100 );
+    c.drawImage(images[i], 0 , 0 , canvas.width , canvas.height );
 
 
 },200)

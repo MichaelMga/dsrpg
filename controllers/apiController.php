@@ -22,14 +22,24 @@
 
 	} else {
 
-		return $response;
+		
+		$exercice1 = new Exercice();
+		$exercice2 = new Exercice();
+		$exercice3 = new Exercice();
+		$exercice4 = new Exercice();
+
+  
+		$exercices = [$exercice1 , $exercice2 , $exercice3 ,];
+
+		return $exercices;
 
 	}
 	
 
-   $exercice1 = new Exercice();
-  
-   $exercices = [$exercice1];
+
+
+
+
 
 
 }

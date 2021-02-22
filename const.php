@@ -2,6 +2,6 @@
 
   define("root", "/DSRPG/") ;
 
-  define("rootUrl", $_SERVER['SERVER_NAME'] . root) ;
+  define("rootUrl", "http://" . $_SERVER['SERVER_NAME'] . root) ;
 
 

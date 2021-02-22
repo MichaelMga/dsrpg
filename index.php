@@ -14,8 +14,6 @@
    $request = $_SERVER["REQUEST_URI"];
 
 
-   echo $request;
-
 
    switch($request){
 
@@ -37,9 +35,23 @@
 
 
 
+    
+  if(isset($_GET['exercice'])){
+    
+     showExercice($_GET['exercice'] , $_GET['category']);
+
+     return;
+
+  }
+
 
 if(isset($_GET['category'])){
     
      showCategory($_GET['category']);
 
+     return;
+
 }
+
+
+
