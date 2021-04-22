@@ -1,0 +1,170 @@
+
+DSRPG over ==> its just revisions 
+
+
+
+ex 1 :
+
+  4789290343342213452189343412347892903433422134521893434 
+
+
+  Do 10 right rotations. add 1,3,4,5 at the start
+
+  Do 6 left rotations. Remove the 3 first values of the top.
+
+  Do 2 right rotations.
+
+  Return the array you obtain
+   
+
+   //PHP
+
+  function rightRotation(array, num){
+
+     for(var i=0; i < array.length ; i++){
+        
+
+           //remove last el , add it to the start
+
+     }
+
+
+  }
+
+
+  function leftRotation(){
+
+       //remove first el , add it to the end
+
+
+  }
+
+
+ hash
+
+  ex2 :
+
+   So , brute force.
+
+
+
+   loop on the word , and check remaining letters. So, yeah , remove each word used.
+
+   Ok. If there is a mismatch , break.
+
+
+
+   maybe , could we use a hash function , independent of order. ok.
+
+
+
+  Ok. until 20h15
+
+
+ex3
+
+bubble sort
+
+
+ex4 :
+
+strings 
+
+20h30
+
+
+
+
+function makeAnagram :
+
+string A , string B 
+
+
+return : the minumum total characters that must be deleted
+
+
+what if not an anagram.
+
+
+karp rabin.
+
+
+
+I think that we could scan the two arrays , and check if there are maching hashes. We could store all the maching hashes ,
+
+take the bigger, and compare it with this hash length.
+
+
+brute force :
+
+get all possible words from array A , get all possible words from array B.
+
+
+Have each word check other words. remove both el when match.
+
+
+
+
+ex 4 (20h42) :
+
+
+Absolute difference in an array :
+
+
+
+Get all pairs , and make pairs. Store diff. Get the better
+
+
+
+
+
+greedy 
+
+ex 5 :
+
+
+
+
+
+search 
+
+ex 6 : 21h20
+
+
+Hash tables : ice cream parlor 
+
+
+Complete the function whatFlavors
+
+
+function whatFlavors ==>
+   
+   price , money ==> return the indices of the 2 flavors they purchase.
+
+
+   Each need to have 2 flavors having a sum of ...
+
+given money val, cost / t
+
+for each trip t ==> smallest id first
+
+
+So , what are the two values that represent the value (or , 2 vals but implied 2).
+
+
+
+Brute force ==> get pairs total . Once you get a sum, break. (when you loop on an el , you remove it).
+
+
+
+So, it simply means there are several pools available?
+
+Same calc.
+
+
+ex 7 :
+
+
+
+I'm coding it all up in PHP
+

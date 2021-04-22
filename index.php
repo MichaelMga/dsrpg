@@ -22,9 +22,11 @@
 
          //showCategory('graph');
 
-         //newCharacter();
+         newCharacter();
 
-         showProfile();
+         //showProfile();
+
+         //showLogin();
 
 
 
@@ -55,3 +57,11 @@ if(isset($_GET['category'])){
 
 
 
+
+if(isset($_GET['profile'])){
+    
+   showProfile();
+
+   return;
+
+}

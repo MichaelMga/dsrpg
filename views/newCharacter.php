@@ -2,25 +2,53 @@
 <style>
 
 
- #characterDiv{
+  #choiceHeader{
+
+      position: absolute;
+      left: 37.5vw;
+      top: 7.5vh;
+
+  }
+
+ .characterDiv1{
 
     position: absolute;
     top: 40vh; 
-    left: 20vw;
+    left: 30vw;
     height: 30vh;
-    width: 10vw;
-
-    background: red;
+    width: 15vw;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    cursor:pointer;
 
  }
 
+ .characterDiv2{
+
+    position: absolute;
+    top: 40vh; 
+    right: 30vw;
+    height: 30vh;
+    width: 15vw;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+ }
+
+ canvas{
+
+     height:100%;
+     width: 100%;
+ }
 
 
 </style>
 
 
 
-<div>h3>Create your character!</h3></div>
+<div id='choiceHeader'><h3>Choose your character!</h3></div>
 
 <br>
 
@@ -28,31 +56,31 @@
 
 
 
-<div id='characterDiv'>
+<div class='characterDiv1'>
      <canvas id='characterCanvas'></canvas>
 </div>
 
 
+<div class='characterDiv2'>
+     <canvas id='characterCanvas2'></canvas>
+</div>
 
 
+
+    <a href="<?php echo rootUrl ?>?profile">Choose character</a>
 
 
 <script>
 
 
-//this object renders a particular
+
+var canvas1 = document.getElementById('characterCanvas');
+
+var c = canvas1.getContext('2d');
+
+var none = 'none';
 
 
-//chracter
-  
-var canvas = document.getElementById('characterCanvas');
-
-var c = canvas.getContext('2d');
-
-
-canvas.width = window.innerWidth;
-
-canvas.height = window.innerHeight;
 
 
 var images = new Array(10);
@@ -65,20 +93,71 @@ for (i=1; i < images.length ; i++){
 
 }
 
-setInterval(function(){
-    
-    i++;
 
-    if( i >= 9){
+
+var index = 1;
+
+setInterval(function(){
+
+    if( index >= 9){
           
-        i = 1;
+        index = 1;
 
     }
-    c.clearRect(0, 0, canvas.width, canvas.height);
-    c.drawImage(images[i], 100 , 100 , 100,100);
+    c.clearRect(0, 0, canvas1.width, canvas1.height);
+    c.drawImage(images[index], 0, 0, canvas1.width, canvas1.height);
+
+    index++;
+
+},100)
 
 
-},200)
+
+
+//canvas2
+
+
+
+
+
+var canvas2 = document.getElementById('characterCanvas2');
+
+var c2 = canvas2.getContext('2d');
+
+var none = 'none';
+
+
+
+
+var images2 = new Array(10);
+
+for (i=1; i < images2.length ; i++){
+
+       images2[i] = new Image();
+
+       images2[i].src = './img/sprites2/' + i.toString() + '.png';
+
+}
+
+
+
+var index2 = 1;
+
+setInterval(function(){
+
+    if( index2 >= 9){
+          
+        index2 = 1;
+
+    }
+    c2.clearRect(0, 0, canvas2.width, canvas2.height);
+    c2.drawImage(images2[index2], 0, 0, canvas2.width, canvas2.height);
+
+    index2++;
+
+},100)
+
+
 
 
 
