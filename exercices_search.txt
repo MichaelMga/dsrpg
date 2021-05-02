@@ -113,17 +113,44 @@
 
 3.
 
-  Ice cream parlor : 
+   Ice cream parlor : 
 
    $cash = 15
 
-   $prices =[12 3 5 8 10]
+   $prices =[12 3 5 8 10];
 
-    =>Can 
+   $pairs = [];
+
+   => can we form a pair equal to 15?
+
+
+   brute force => 
+
+     get all pairs, test => to get all pairs => 
+     
+    $pricesCopy = $prices;
+
+    for(i=0; i < count($pricesCopy ); $i++){
+        
+        for( y=i+1; y < count($pricesCopy); $y++){
+              
+           [if ($prices[$i] + $prices[$y]) == $sum){
+                  
+                  return [$i, $y];
+
+           };
+
+        }
+
+           
+     }
+
 
 
 
 4.
+
+
 
 
 
