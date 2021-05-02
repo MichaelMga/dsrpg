@@ -1,0 +1,668 @@
+1 
+
+ Actually used PHP version :
+
+ PHP 7.1 or php 7.2
+
+2
+
+
+How to execute PHP from the command line?
+
+
+=> php script.php
+
+
+3
+
+  Main difference between php4 and php5?
+
+   
+   php 5 presents many additional OOP features.
+
+
+
+
+4
+
+
+ Is multiple inheritance supported in PHP?
+
+  No, PHP only supports single inheritance. 
+
+  It means that a class can be extended from only 1 class (1 parent)
+
+
+
+
+5
+
+ Final class and final method :
+
+   final introduced in PHP5. Final class cant be extended, and a final method cannot be "overriden"
+
+
+
+6
+
+
+ Comparison object in php :
+
+    == mean same class
+
+
+    === same instance of same object
+
+
+
+7
+
+
+  main difference between require() and require_once()?
+
+    Same task , except the second function checks if the PHP script is already included or not before executing introduced
+
+    (while require accept doublons).
+
+
+8
+
+
+information of variable, readable by a human :
+
+  print_r();
+
+
+9
+
+
+ meaning of 'Parse error in PHP - unexpected T_variable at line x'
+
+    
+    syntax error explaining mistake at line x , stop parsing and executing the program.
+
+
+
+10
+
+
+ file_get_contents() useful for?
+
+  reading a file, and storing it in a string variable.
+
+
+
+11
+
+
+connect to mySQL database from PHP script:
+
+   
+   we can use mysqli() and PDO
+
+  
+   via mysqli  =>
+
+        $db = mysqli_connect("host" , "username" , "password");
+
+        mysqli_select($db , "dbName");
+
+
+12
+
+    //rows count
+
+    mysqli : 
+
+       $result = mysqli_query($db, 'SELECT Age, Name FROM People ORDER BY Lastname);
+
+       $rows = mysqli_num_rows($result);
+
+
+    pdo :
+
+
+      rows = $db->rowCount();
+
+
+13
+
+
+  check value of a given variable is a number?
+
+      
+      is_numeric();
+
+
+14
+
+   check value of a given variable is a alphanumeric?
+      
+
+    ctype_alnum();
+
+
+15
+
+   deletes
+
+   unlink()
+
+
+
+16
+    set element to undefined
+
+    unset()
+
+17
+
+    what is the static variable in function useful for :
+
+    function myFunction(){
+
+        static $var = 1;
+
+        echo $var;
+
+        $var++;
+
+    }
+
+
+    //1
+
+    //2
+
+    //3
+
+
+18
+
+   pass a variable by reference :
+
+      $varA =&$varB;
+
+      //ref , else it's a copy
+
+19
+
+   To get a variable accessible in functions, use the keyword "global".
+
+
+20
+
+
+  most convenient hashing methods are crypt() and hash()
+
+
+
+21
+
+
+ 13 == "13" 
+ 
+ TRUE
+
+ 13 === "13" 
+ 
+ FALSE
+
+
+
+22
+
+
+cast types in php
+
+
+  $myVar = (boolean) $true;
+  
+
+
+23
+  
+  //how to count using mysqli
+    
+    mysqli_num_rows()
+
+
+24
+
+    //number of affected entries by a query
+
+
+
+25
+
+    // differences between mysqli_fetch_object() and mysqli_fetch_array()
+
+       ==>mysqli_fetch_object collects the first single matching record
+
+       ==>mysqli_fetch_array collects all matching records from the table in an array.
+
+
+
+       for real ==> mysqli_result::fetch_array ( ) : array|null|false 
+
+
+
+
+       it's a class : mysqli_result::
+
+
+         MYSQLI_NUM
+
+         MYSQLI_ASSOC
+
+
+         MYSQLI_BOTH
+
+26
+
+
+ SOLID principles?
+
+
+
+
+27
+
+  $_POST['var'] ==> access data in the url sent using the post method
+
+28
+  
+  check if a variable is alphanumeric => ctype_alnum()
+
+
+29
+
+   
+   unlink() => delete
+
+
+30
+ 
+
+   unset() => set an element undefined
+
+
+31
+
+
+    $GLOBALS ==> associative array including references to all variables which are currently defined in the global scope of the script.
+
+
+32
+
+
+   $_SERVER ==> array including information created by the web server such as paths, headers and script locations
+
+33
+
+   $_FILES => associative array composed of items sent to the current script via the HTTP POST method.
+
+
+34
+
+
+call a script from interface 
+
+ php script.js
+
+
+35
+   
+   'final' introduced in PHP5. 
+
+   final class can't be extended
+
+   final methods can't be overriden  
+
+  
+36
+
+ 
+ Comparison of objects in PHP
+ 
+ == same class
+
+ === same instance of the same class (same object)
+
+
+37
+
+ urlencode() and htmlentities()
+ When passing values through a form or an URL :
+
+    when passing invalid chars
+
+    when passing chars reserved for url 
+
+
+
+
+38
+ 
+
+ to check if var is empty => empty()
+
+
+39
+
+ unset() => make var undefined.
+
+
+40
+
+ unlink() => delete var
+
+
+41
+
+ ecape => avoiding collisions:
+
+
+42
+
+
+ cast vars php
+
+  (int) val
+
+  (string) val
+
+  (bool) val
+
+  (float) val
+
+
+43
+  
+  func_num_args() 
+  
+  => gives the num of arguments passed into a function 
+
+
+
+44
+   ctype_alnum
+   
+   => check if val is alphanumeric
+
+
+
+45
+
+   is_numeric 
+
+    =>check if val is a num 
+
+
+46
+
+ :: is used to access static methods
+
+47
+ 
+  in php , vars are passed by values in php, meaning the value inside the vals are passed:
+
+  meaning , creates a copy, not a ref.
+
+
+48
+
+   to pass by reference
+  
+   $myvar = 10;
+
+   $myvarAlias = &$myvar;
+   
+
+   function fct(&$myvar)
+ 
+
+
+49
+
+   A parent constructor is not called implicitely in a class constructor
+
+   parent::constructor($val)
+
+50
+
+   abstract clas
+ 
+51
+
+  interface
+
+52
+
+  trait 
+
+
+53
+  constructor => 
+ function __construct(){
+
+
+ }
+
+54
+
+  call variable inside string 
+
+
+55
+
+  how to escape $ in php
+
+
+56
+
+ how to avoid sql injection in php
+
+57
+
+
+   persistent cookie => A persistent cookie is permanntly stored in a cookie file on the browser's computer.
+   
+   by default, cookies are temporary and erased if we close the browser.
+
+
+58
+
+ when do session end?
+
+ They automatically close when php is finished executing, but can be manually ended using the session_write_close()
+
+
+59
+
+ session_unregister() and session_unset() :
+
+
+   session_unregister() unregisters a session variable
+
+   session_unset() frees all session variables
+
+
+60
+
+   $_SERVER => mainly infos about the sever
+
+61
+
+ diff between and , and &
+
+
+ & => bitwise and
+
+ and => and
+
+
+
+62
+
+$a === $b 
+
+same key value/pair in the same order, same type.
+
+
+
+63
+
+Exception::getMessage and Exception::getLine diff
+
+
+64
+
+
+change the max size of files to be up
+
+
+
+65
+ 
+
+ $_FILES => files sent through POST
+
+ $_FILES['myFile]['name'] => original file name
+
+ $_FILES['myFile']['tmp_name'] => temporary file name
+
+
+
+66
+
+
+
+    PDO :
+
+
+
+67
+  
+
+  mysqli : 
+
+
+
+  mysqli_select()
+  
+    
+   new mysqli($servername, $user, $pass, $mydb);
+
+
+
+
+   //fetch result
+
+
+   //count rows
+
+
+68 
+
+
+ pdo :
+
+
+ $dsn ='mysql:dbname=mydb;host=myHost;charset=utf8mb4';
+
+ $user;
+
+ pass;
+
+ $db = new PDO($dsn, $user, $pass);
+
+ same as :
+
+ new PDO('mysql:host=localhost;dbname=mydb', '' , '');
+
+69
+
+
+70
+
+ 3 classes of errors in PHP :
+
+    
+71
+
+
+  pass vars using sessions, cookies or hidden form fields
+
+
+72
+
+  how to setup a htaccess file.
+
+73
+
+ set_time_limit() allows to extend the execution of a script.
+
+74
+  => to set a cookie => setcookie($name, $val, time());
+
+  //additional options
+75
+ how to destroy a cookie => set the cookie with a past expiration time
+
+
+76
+
+ escape data before storing it 
+
+   addslashes() allows to escape data before storing into the db
+
+
+77
+
+  unit tests :
+
+
+78
+
+ Code style guide :
+
+
+
+79
+
+  set_time_limit(0) => infinite execution 
+
+
+80
+
+ some PHP7 feautures :
+
+ scalar type declarations
+
+ return type declarations
+
+ spaceship operator
+
+ generator delegation
+
+ space ship operator
+
+81
+
+ diff $$ and $
+
+ $a = 'b';
+
+ $$a = $b;
+
+
+ $test = 'myvar';
+
+ $a = "test";
+
+
+ echo $$a;
+  //output => 'myvar'
+
+

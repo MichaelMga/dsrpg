@@ -1,0 +1,87 @@
+1.Roads and libraries
+
+  Determine the min cost to provide library access to all citizens of HackerLand.
+
+  There are n cities numbered from 1 to n.
+
+  Currently no libraries and cities not connected.
+
+  Bidirectional roads may be built between any city pair listed.
+
+  A citizen can access a library if :
+
+  Their city contains a library.
+
+  They can travel by road from their city to a city containing a library.
+
+
+  Meaning spanning tree with a condition.
+
+
+  Meaning ==> 
+
+
+  How to have all nodes satisfied.
+
+
+
+
+
+2.
+
+Finding the nearest clonee :
+
+  In this challenge, there is a connected undirected graph where each of the nodes is a color.
+
+  Given a color, find the shortest path connecting any two nodes of that color. 
+  
+  Each edge has a weight of 1.
+
+
+
+
+
+3.
+
+
+
+
+
+
+
+4.
+
+
+
+
+
+
+
+
+
+5.
+
+
+
+
+
+6.
+
+
+
+
+
+7.
+
+
+
+
+8.
+
+
+
+9.
+
+
+
+10.

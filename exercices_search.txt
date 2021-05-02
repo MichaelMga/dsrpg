@@ -1,0 +1,131 @@
+1.
+   15h50
+
+   Missing numbers :
+
+
+   2 arrays of ints :
+
+     arr = [7 , 2 , 5 , 3 , 5 , 4]
+
+     brr = [3 , 3 , 4 , 4 , 3 , 5]
+
+
+    Find which el from the 2nd arr is missing from the 1st one.
+
+
+    notes :
+
+     
+     if num happens several times in the list, frequency is same => each num has a proper identity.
+
+     return missing numbers sorted ascending only include a missing num once
+
+
+     the diff between the max and min nums  in the original lists is less than or equal to 100. ==> meaning first scan the arr, get the max and min. Break if min and max have a diff of more than 100.
+
+
+    brute force : 
+
+       create a copy of brrr.
+
+       first, loop on the whole arr once => get the min and the max => (min = 0, max = 0 > compare both with each)....
+
+       loop on each el. of arr => check if it's located in the copy.
+
+       if it is, remove this el from the copy. if not, insert this el => either in a priority queue "classicaly" ordered or a max heap.
+
+       also, check if it wasnt inserted => use a hash table, indexed with the num.
+
+       if the num was already inserted, don't.
+
+
+     
+2.
+
+
+
+  Sherlock and array :
+
+
+    16h10
+
+     watson gives Sherlock an array of integers. [1 2 3 3 6 8];
+
+     find an el of the arr such that the sum of all elements to the left equal to the sum of all elements to the right.
+
+
+
+     so : 
+
+      possibility => yes or no
+
+
+     
+     brute force =>
+
+     for each num, count whats on the left, and count whats on the right.
+
+    if a num was found, return the num. Else, return none.
+
+
+    Issue : we keep looping on same else :
+
+
+      
+      possibility => add the last num.
+
+
+      ex : 
+      
+      $arr = [3 5 6 8 0 10] ;
+
+      $lastNum = 0 ;
+
+      $leftArrSum = 0;
+
+      $rightArrSum = 0;
+
+      
+      foreach arr{
+
+        $leftArrSum += $lastNum;
+
+        $rightArrSum -= $lastNum;
+
+        
+        if($leftArrSum == rightArrSum){
+
+
+            return YES;
+
+
+        }
+        
+    
+      $lastNum = $arr[$i];
+
+      }
+
+
+
+
+
+3.
+
+  Ice cream parlor : 
+
+   $cash = 15
+
+   $prices =[12 3 5 8 10]
+
+    =>Can 
+
+
+
+4.
+
+
+
+5.
+

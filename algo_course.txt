@@ -1,0 +1,26 @@
+
+Huffman coding :
+
+
+reduce size of chain using its own code.
+
+ASCII => 8 bits per character. (128 char)
+
+
+What you can do :
+
+Create your own alphabet, and attach it to the message.
+
+Count the number of combinations.
+
+
+
+
+binary tree :
+
+
+   right child : 2 * i;
+
+   left child : (2 * i) + 1;
+
+

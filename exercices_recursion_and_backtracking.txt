@@ -1,0 +1,299 @@
+
+1.CrossWordPuzzle
+
+
+10 x 10 crossword grid, along with a set of words which need to be filled into the grid.
+
+Cells are marked either "+" or "-".
+
+Cells marked with a "-" are to be filled with the word list.
+
+
+The following shows and example crossword from the input crossword grid and the list of words to fit.
+
+
+ex :
+
+words = [POLAND, LHASA, SPAIN, INDIA] :
+
+
+
+
+
+
+
+2.Recursive digit sum :
+
+  ==> concepts used => iteration, split a num => adding of its nums
+
+
+Given an integer, we need to find the super digit of the integer
+
+ Super digit ==> ifx has only 1 digit, super digit itself.
+
+ Otherwise, super digit of x == 
+ 
+ super digit of ==> sum of digits of x.
+
+ What does "sum of digits" means?
+
+ Ok. Meaning, a num is either itself if not changed, or sum of digits.
+
+ ex :
+
+
+    9875
+
+
+     9 + 8 + 7 + 5
+
+
+
+     input :
+
+
+        return the super digit :
+
+
+
+input :
+
+
+
+
+function calculateSuperDigit($num){
+
+    $superDigit = 0;
+
+
+    if(strlen($num) > 1){      
+
+        $numArray = str_split($num);
+
+
+       for($i=0; $i < count($numArray); $i++){
+
+           $superDigit += $numArray[$i];
+
+       }
+
+
+    } else {
+
+        $superDigit = $num;
+    }
+
+
+
+       return $superDigit;
+
+}
+
+
+
+
+
+
+
+3. Davis's Staircase
+
+
+Davis has a number of staircases in his house he likes to climb. He likes to climb each stair 1,2, or 3 steps at a time.
+
+What are the different possible combinations to climb stairs.
+
+
+ex :
+
+n=5
+
+
+obvious way 
+
+  => use a search tree
+
+
+$steps = [1,2,3];
+
+$possibleConfigs = 0;
+
+
+
+
+ function getConfigs($n){
+
+     //
+
+
+
+
+ }
+
+
+
+  function checkNextStep($arr, $arrTotal , $n){
+
+        global $steps; 
+        global $possibleConfigs;
+      
+         
+         for(){
+             
+             if( ($arrTotal + $steps[$i]) == $n ){
+
+                 continue;
+                 
+
+              } else if( ($arrTotal + $steps[$i]) <=   ){
+
+
+               } else {
+
+                    //if higher
+                   continue;
+
+               }
+ 
+
+
+         }
+
+
+
+
+  }
+
+
+
+
+
+
+4.
+
+
+  Short palindrome :
+    
+
+  string s, of n lowercase English letters where each character si "denotes the letter at index i "in s".
+
+  s = "mystring" 
+
+  si;
+
+
+  $maxPalNum = 4;
+
+  $palCombinations = 0;
+
+
+
+
+  We define a "palindromic tuple" ABCD of s to be a sequence of indices in s satisfying the following criteria :
+
+    sa = sd
+
+    sb = sc 
+
+      
+      hellomynameismikehowareyom
+
+    (5,10,12,14);
+
+
+
+
+  $pool = str_length($s);
+      
+  
+   
+  function getValidPals($s){
+
+      $indicesArray = buildIndicesArray($s);
+      
+      $node = 1;
+
+      global $palCombinations;
+
+      //init palCombinations;
+
+      $palCombinations = 0;
+
+       for($i=0; $i < count($indicesArray); ; $i++){
+              
+             $updAvailableIndices = updateAvailableIndices($indicesArray[$i], $indicesArray);
+
+             traversTree($s, $node+1, $updAvailableIndices);
+
+       }
+         
+
+  }
+
+
+
+  function validPal($s, $pal){
+
+         if(($s[$pal[0]] == $s[$pal[3]]) && ($s[$pal[1]] == $s[$pal[2]]) ){
+
+       
+               return true;
+
+
+
+         } else {
+
+
+              return $false;
+
+         }
+
+  }
+
+
+
+
+
+  function updateAvailableIndices($selectedIndice , $indicesArr){
+           
+         //recreate a new arr from the indice towards the end
+
+         
+
+         return $updatedIndicesArr;
+
+
+  }
+
+
+
+
+function traversTree($s, $pal, $node,$availableIndices){
+
+    global $maxPalNum;
+
+    global $palCombinations;
+
+
+    //if($node == $maxPalNum){
+
+        //check for storing 
+
+           if(validPal($s, $pal) == true){
+
+                
+
+
+           }
+        
+
+    }
+
+
+}
+
+
+  
+
+
+5.
+

@@ -1,0 +1,53 @@
+
+17h25
+
+1.
+
+Is this a binary search tree?
+
+
+left of node : less
+
+right of node : higher
+
+
+Data value of every node is distinct
+
+
+Ok, so all we have is a root object. So, we know each object has a right node property, and a left node property.
+
+
+$node->data = 5;
+$node->leftNode = null;
+$node->rightNode = $obj;
+
+
+function checkBst($node){
+     
+     $rightNode = $node->rightNode;
+     $leftNode = $node->leftNode;
+
+
+     //is the left node of this tree different, and lower (or null) ? ==> question, how do you actually refer to null nodes?
+     //if right node is null or lower  || /if left node is null or lower  
+
+
+     if( checkBst($leftNode) == true && ($leftNode->data < node->data || $leftNode->data == null ) && checkBst($rightNode) == true && ($rightNode->data > node->data || $rightNode->data == null ) ) {
+
+             return true;
+
+     }
+
+
+
+      return false;
+
+}
+
+
+
+echo checkBst($rootNode);
+
+
+
+2.

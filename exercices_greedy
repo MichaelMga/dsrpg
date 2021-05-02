@@ -1,0 +1,125 @@
+1.
+
+11h40
+
+  Grid challenge
+
+  Given a square grid of characters in the range ascii[a-z],
+
+    //how many rows, how many columns   
+
+     
+     $grid = ['abc', 'age', 'bde'];
+
+      
+      //how to determine if a letter is smaller than another one? Should we use their ascii code
+
+
+      if we consider smallest chars have a highest code ==> capitalize all letters.
+   
+      ==>first, use the function ucwords() => converts the first character to each string to uppercase.
+
+      Then, simply use ord() to get the ascii num 
+ 
+
+       
+       -loop on each
+
+         $grid = []
+
+        for i = 0 ; i < row length
+
+          $lastLetter = 'A';
+
+          for each row  
+
+            if letter ( ord($row[$y][$i]) > ord(lastWord){
+
+
+               return false;
+
+
+            }
+
+
+      return true;
+     
+
+
+      
+   2.
+
+
+
+     12h45
+
+
+     Maximum perimeter triangle
+
+
+  Brute force :
+
+   get all triplets , sort them.
+
+   Then, if (isDegenerate() == true){
+           
+           checkForBestTriangleUpd($triangle);
+
+   }
+
+
+
+  3.
+
+
+
+  13h10 :
+
+
+
+  Marc's Cakewalk :
+
+
+     Marc loves Cupcakes => but also stay fit.
+
+
+      formula to loose wieight => for an a arr cal [x,y...z] => (2^j * (x||y||...||z) ) + (2 ^j+1  * (x||y||...||z) ) + .... (2 ^j+n) * (x||y||...||z) );
+
+       
+      sort the arr in decreasing order using quicksort, compute the num.
+
+
+
+4.
+   
+   cloudy day :
+
+   12h25
+
+
+   //I think the best way is to improve it little by little
+
+   
+   each city is an object, with a property coveringClouds = [];
+
+   first, the point of building cloud objects is to have a map of cities covered and sunny cities.
+
+   Then, reloop on each cloud and remove cities that have a more than one cloud covering it. 
+
+   Update the top num if needed.
+
+
+
+5.
+
+  Chief hopper :
+   
+  16h35
+  
+  Row of buildings of diff. heights arranged at each index.
+
+  The bot starts at building 0 , "and at height 0"
+
+  simple : loop on each
+
+ start from 0, traverse. If one traversal goes through, return and store the minEnergy.

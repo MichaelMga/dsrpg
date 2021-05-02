@@ -1,0 +1,305 @@
+1. 
+
+Equal stacks :
+
+
+  You have 3 stacks of cylinders where each cylinder has 
+
+
+
+
+
+
+2.
+
+
+Min Max Riddle
+
+arr of size n 
+
+=> find the maximum of the minimum  of every window size  in an array.
+
+window size from 1 to n
+
+
+ok, easy.
+
+
+[14,3,45,51];
+
+
+ => it's all about splitting the arr in pairs, triplets... then looping. 
+ 
+ Actually not => only adjacent elements
+
+
+
+ //1
+   
+    explode the arr
+ 
+ //2
+    
+so, to build 14-3 , then 3-45
+
+You Actually loop on each el. If there is not enough space to build one window, break. Else, build a window. Then, check if it's the smallest el.
+
+
+
+
+
+
+function checkForSmallestElUpdate(){
+
+
+}
+
+
+
+
+
+
+function findMins($arr, $windowSizes){
+
+    $mins = [];
+     
+
+    for($i = $windowSizes[0] ; $i < ($windowSizes[1] + 1) ; $i++){
+              
+              $size = $i;
+
+              //loop on each el of the array
+
+                for($y = 0 ; $i < count($arr) ; $y++){
+
+                     //if you can build a window, build on, else break
+                      
+
+                      //meaning => if the space left is higher or equal to $y => this el + els got to be eq to win;
+
+
+                      So, if an el ha 2 els after it can do a 3 el window. 
+
+
+                      Ex, its the 10th el. The arr is 12 els =>
+                       
+
+                      if( (length - $i) >= $i ){
+
+                            $windowMin = $arr[$y]; //first el of the array to come
+                            
+                            for($n=$y ; $n < ($y+$i+1) ; $n++){
+                                 
+                                 if($arr[$n] < $windowMin){
+                                            
+                                      $windowMin = $arr[$n];
+
+                                 }
+
+                            }
+
+
+                            array_push($mins, $windowMin);
+
+
+                      } else {
+
+                          continue;
+
+                      }
+
+
+
+                }
+        
+
+    }
+     
+
+    return $mins;
+
+}
+
+
+
+
+
+
+3. Castle on the grid 
+
+ 
+square grid with some cells open (.) and some blocked (X)  (open? blocked?) 
+
+Your "playing piece" can move "along any row or column" (meaning?) until it reaches the edge of the grid or a blocked cell. 
+
+
+determine the min num to get to the goal
+
+
+. => open 
+
+X => blocked
+
+shortest path :
+
+, to jump a line.
+
+
+ex : grid = ['...', '.X.' , '...'];
+
+
+s..
+.x.
+..g
+
+
+
+startX = 0;
+
+startY = 0;
+
+startX = 1;
+
+goalY = 2;
+
+
+
+startPos(x, y) => ok.
+
+x, go from right to left (pos on an array) , y, from top to bottom (what array);
+
+
+goal(x,y) ==> shortest path algo?
+
+ 
+
+
+
+
+Bf ==> test all paths, return the shortest .
+ 
+$shortestMovesNum = 0;
+
+ function getShortestPath($grid, $start , $goal ){
+
+     global $shortestMovesNum;
+
+     $xStart = $start[0];
+
+     $yStart = $start[1];
+
+
+
+
+      if($grid[$xStart][$yStart] == X){
+
+        //if the starting point is blocked, break
+
+         return false;
+
+      }
+
+
+
+
+
+
+     for( //loop on each possibility of the startingPoint){
+
+         //possibility to check element on the right if exists and not blocked
+
+            
+
+         //possibility to check check element on the left if exists and not blocked
+
+         //possibility to check top array if it exists at the same place, and not blocked.
+
+        //possibility to check bottom array if it exists at the same place, and not blocked.
+
+        when no unvisited node around break;
+
+
+           //replace shortestMovesNum if it's smaller
+
+     }
+
+
+     return $shortestMovesNum;
+
+ }
+
+
+
+
+
+
+function checkNextMove(){
+
+
+
+}
+
+
+
+
+
+4.  Largest Rectangle
+
+   22h20
+
+  
+    skyline real estate developers is planning to demolish a number of buildings, construciong mails in their place.
+
+    "solid area"?
+
+
+    Your task is to find the largest solid area in which the mail can be constructed. "the mail?" => 1?
+
+     Two dimensional landscape => what does it looks like?
+
+
+     Each bulding has a height given by h[i] where i is part of [1,n]. If you join k (can it be 1?) adjacent buildings, they will form a solid rectangle of area? => a "solid recrtangle area"? How much is "k"?
+
+     
+     of area k x min(h[i], h[i+1],..,h[i + k-1])
+
+     min() ? => the smallest?
+
+
+     ex :
+
+     h = [3,2,3];
+
+     h =|3,2,3]
+
+     height h?
+
+         rect of height h = 2 and length k = 3
+
+         area = 3 * min();
+
+         . => x ?
+
+        h * k = 2 * 3 = 6;
+
+
+ each building has a height h => 
+
+
+    There are a number of building in a certain two dimensional landscape.
+
+
+    ex :
+
+       h = [3,2,3];
+
+
+
+   
+     
+   
+
+5.
+
+
+

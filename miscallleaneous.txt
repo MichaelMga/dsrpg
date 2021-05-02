@@ -1,0 +1,30 @@
+SOLID principles :
+
+
+
+
+
+
+
+
+
+---------------Devops
+
+
+
+
+
+
+
+
+
+what is a compiler
+
+
+how is built php
+
+
+under what is built php
+
+
+what's the concept of microservices
